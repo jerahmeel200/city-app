@@ -1,0 +1,114 @@
+.header {
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  background-color: rgba(25, 24, 24, 0.5);
+}
+.header__wrapper {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.header__top input {
+  width: 75%;
+  height: 30px;
+  max-width: 600px;
+  margin-right: 10px;
+}
+.header__top button {
+  background: #ec9f09;
+  padding: 5px 50px; /* Set the padding around the button */
+  font-size: 16px; /* Set the font size */
+  border: none; /* Remove the border */
+  cursor: pointer;
+  margin-right: 10px;
+}
+.header__left {
+  width: 30%;
+}
+.header__right {
+  /* background: red; */
+  width: 70%;
+}
+.header__top {
+  text-align: right;
+}
+.navCont {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.navCont li {
+  font-weight: 400;
+  font-size: 19px;
+  color: rgb(212, 195, 195);
+  cursor: pointer;
+}
+.mobile__left {
+  display: flex;
+  justify-content: space-between;
+}
+.mobile__wrapper {
+  display: none;
+}
+.top__wrapper {
+  display: flex;
+  align-items: center;
+}
+.want__mobile {
+  padding: 5px 30px;
+  margin-right: 10px;
+}
+.snack {
+  padding: 4px;
+}
+.mobile__right input {
+  width: 100%;
+}
+.mobile__wrapper {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  display: none;
+}
+.active__menu {
+  display: block;
+}
+.mobile__navCont li {
+  border-bottom: 1px dotted gray;
+  padding-left: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 990px) {
+  .mobile__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background: rgb(27, 76, 192);
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0);
+  }
+  .header {
+    box-sizing: border-box;
+  }
+  .header__wrapper {
+    display: none;
+  }
+  .mobile__wrapper {
+    display: block;
+  }
+}
