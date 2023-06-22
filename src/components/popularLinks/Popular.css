@@ -1,42 +1,101 @@
+.pop__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop__wrap span {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 10px;
+}
 .pop__wrap {
   display: flex;
-  flex-direction: column;
-  background-color: rgba(9, 70, 115, 0.83);
-  padding: 20px 80px 20px 80px;
 
-  margin-right: 3px;
+  align-items: center;
+  margin-top: -100px;
+  background-color: rgba(9, 70, 115, 0.5);
+  margin-right: 5px;
   color: white;
+  flex-direction: column;
+  z-index: 999;
+  padding: 20px 0px 20px 0px;
+  height: 100px;
+  width: 16%;
 }
 .images {
   color: white;
 }
-.pop__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: wrap; */
-}
+
 .accordion {
   display: none;
 }
 .accordionItem {
 }
+.show {
+  font-size: 25px;
+  font-weight: 600;
+}
 .accordionContent {
-  margin-left: 30px;
+  background-color: rgb(229, 219, 219);
+}
+.linkContainer {
+  background-color: #165788;
+  color: white;
+  display: none;
+}
+.linkContainer p {
+  padding: 20px 20px 20px 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.accordionContent p {
+  padding: 10px 50px 10px 50px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #165788;
+  border-bottom: 1px solid rgb(196, 192, 192);
 }
 .accordionTitle {
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid #165788;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  margin-left: 20px;
+  padding: 10px 40px 10px 40px;
+}
+.accordionTitle span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #165788;
+}
+.childList {
+  background-color: rgb(202, 197, 197);
+  width: 100%;
+  display: flex;
+  padding: 50px 60px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.childList li:last-child {
+  border-right: none;
+  /* border-right: 1px solid black; */
+
+  display: flex;
   margin-right: 20px;
+  text-align: center;
 }
 @media only screen and (max-width: 990px) {
   .pop__container {
     display: none;
+  }
+  .pop__child {
+    display: none;
+  }
+  .linkContainer {
+    display: block;
   }
   .accordion {
     display: block;
@@ -47,11 +106,13 @@
 }
 @media only screen and (max-width: 1355px) {
   .pop__wrap {
-    padding: 10px 60px 10px 60px;
+    padding: 10px 0px 10px 0px;
+
+    width: 15%;
   }
 }
 @media only screen and (max-width: 1120px) {
   .pop__wrap {
-    padding: 10px 40px 10px 40px;
+    padding: 10px 30px 10px 30px;
   }
 }

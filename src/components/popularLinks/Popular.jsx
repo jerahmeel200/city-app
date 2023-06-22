@@ -2,62 +2,115 @@ import React from "react";
 import "./Popular.css";
 import FaArrowTrendDown from "react-icons/fa";
 import Accordion from "./Accordion";
+import { div } from "@tensorflow/tfjs";
 
 function Popular() {
   const popular = [
     {
-      title: "items",
+      id: "1",
+      title: "Trending",
       icon: "/videos/trending.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "By-Election  for Mayor",
+        "Parking Violations",
+        "Property Tax Lookup",
+        "Drop-in Swimming & Water Play",
+        "Waste Reduction",
+      ],
     },
 
     {
-      title: "items",
+      id: "2",
+      title: "Healthy Living",
       icon: "/videos/trending.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "Respiratory Viruses",
+        "COVID-19 Vaccines",
+        "MPOX (Monkeypox)",
+        "Mental Health",
+        "Child Vaccination",
+      ],
     },
 
     {
-      title: "items",
+      id: "3",
+      title: "Getting Around",
       icon: "/videos/trending.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
-
     {
-      title: "items",
+      id: "4",
+      title: "Permits & Licences",
       icon: "/videos/trending.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
-
     {
-      title: "items",
+      id: "5",
+      title: "Your City",
       icon: "/videos/trending.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
-
     {
-      title: "items",
+      id: "6",
+      title: "Your Property",
       icon: "/videos/trending.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
   ];
+
+  const [isActive, setIsActive] = React.useState(popular[0].id);
+  const [isAccordionVisible, setIsAccordionVisible] = React.useState(false);
+
+  const toggleAccordion = () => {
+    setIsAccordionVisible(!isAccordionVisible);
+  };
+
   return (
     <>
       <div className="pop__container">
-        {popular.map((item, index) => (
-          <div className="pop__wrap">
+        {popular.map((item) => (
+          <div
+            className="pop__wrap"
+            key={item.id}
+            onClick={() => setIsActive(isActive === item.id ? null : item.id)}
+          >
             <img className="images" src={item.icon} alt="" />
-            trending
+            <span>{item.title}</span>
           </div>
         ))}
       </div>
-
-      <div className="accordion">
-        hello
-        {popular.map(({ title, content }) => (
-          <Accordion title={title} content={content} />
-        ))}
+      {isActive && (
+        <div className="pop__child">
+          {popular.map((item) => (
+            <div key={item.id}>
+              {item.id === isActive && (
+                <ul className="childList">
+                  {item.content.map((contentItem, index) => (
+                    <li key={index}>{contentItem}|</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="linkContainer">
+        <p onClick={toggleAccordion}>Popular Links</p>
       </div>
+      {isAccordionVisible && (
+        <div className="accordion">
+          {popular.map(({ title, content, id }) => (
+            <Accordion
+              key={id}
+              title={title}
+              content={content}
+              isActive={isActive}
+              setIsActive={setIsActive}
+              id={id}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 }
