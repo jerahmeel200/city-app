@@ -8,7 +8,8 @@ function Hero() {
       <div className={styles.videoContainer}>
         <video
           className={styles.video}
-          src="/videos/vidzz.mp4"
+          // src="/videos/market-big.mp4"
+          src="/videos/market-medium.mp4"
           autoPlay
           loop
           muted

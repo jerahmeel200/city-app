@@ -5,11 +5,9 @@ function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false); // State variable to control the visibility of mobile nav
 
   const navData = [
-    { title: "Service & Payment" },
-    { title: "Comunity & People" },
-    { title: "Business & Economy" },
-    { title: "Explore & Enjoy" },
-    { title: "City & Government" },
+    { title: "About Us" },
+    { title: "Our Team" },
+    { title: "Our Mandate" },
   ];
 
   const toggleMobileNav = () => {

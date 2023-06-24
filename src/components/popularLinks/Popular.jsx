@@ -2,7 +2,6 @@ import React from "react";
 import "./Popular.css";
 import FaArrowTrendDown from "react-icons/fa";
 import Accordion from "./Accordion";
-import { div } from "@tensorflow/tfjs";
 
 function Popular() {
   const popular = [
