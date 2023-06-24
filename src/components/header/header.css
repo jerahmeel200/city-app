@@ -64,17 +64,21 @@
   cursor: pointer;
 }
 
-.header__top {
-  text-align: right;
+.mobile__wrapper {
+  display: none;
+  height: 100%;
 }
 
 .mobile__left {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
-.mobile__wrapper {
-  display: none;
+
+.mobile__left img {
+  height: 100%;
 }
+
 .top__wrapper {
   display: flex;
   align-items: center;
@@ -101,13 +105,6 @@
 }
 .active__menu {
   display: block;
-}
-.mobile__header__center li {
-  border-bottom: 1px dotted gray;
-  padding-left: 20px;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 990px) {

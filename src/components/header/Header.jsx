@@ -43,7 +43,7 @@ function Header() {
           </div>
         )}
         <div className="mobile__left">
-          <h1 style={{ display: "flex", alignItems: "center" }}>LOGO</h1>
+          <img src="/images/logo.png" />
           <div className="top__wrapper">
             <button className="want__mobile">i want to ..</button>
             <button onClick={toggleMobileNav} className="snack">
@@ -54,9 +54,6 @@ function Header() {
               )}
             </button>
           </div>
-        </div>
-        <div className="mobile__right">
-          <input type="text" placeholder="Search" />
         </div>
       </div>
     </div>
