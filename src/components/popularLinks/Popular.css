@@ -14,7 +14,8 @@
   cursor: pointer;
   align-items: center;
   margin-top: -100px;
-  margin-right: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
   color: white;
   flex-direction: column;
   z-index: 999;

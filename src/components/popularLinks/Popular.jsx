@@ -77,7 +77,7 @@ function Popular() {
               backgroundColor:
                 isActiveBigScreen === item.id
                   ? "#165788"
-                  : "rgba(9, 70, 115, 0.5)",
+                  : "rgba(9, 70, 115, 0.7)",
             }}
             className="pop__wrap"
             key={item.id}
