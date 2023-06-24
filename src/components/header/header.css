@@ -65,12 +65,17 @@
 .want__mobile {
   padding: 5px 30px;
   margin-right: 10px;
+  background-color: #ec9f09;
+  border: none;
+  cursor: pointer;
 }
 .snack {
   padding: 4px;
 }
 .mobile__right input {
   width: 100%;
+  border: none;
+  height: 30px;
 }
 .mobile__wrapper {
   font-size: 1.3rem;

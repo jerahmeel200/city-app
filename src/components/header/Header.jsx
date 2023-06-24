@@ -52,12 +52,16 @@ function Header() {
           <div className="top__wrapper">
             <button className="want__mobile">i want to ..</button>
             <button onClick={toggleMobileNav} className="snack">
-              {showMobileNav ? <span>X</span> : <FiMenu />}
+              {showMobileNav ? (
+                <span style={{ fontWeight: 500, fontSize: "20px" }}>X</span>
+              ) : (
+                <FiMenu />
+              )}
             </button>
           </div>
         </div>
         <div className="mobile__right">
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
       </div>
     </div>
