@@ -21,17 +21,13 @@ function Header() {
           <h1>LOGO</h1>
         </div>
         <div className="header__right">
-          <div className="header__top">
-            <input type="text" placeholder="search" />
-            <button>i want to..</button>
+          <div className="navCont">
+            {navData.map((item) => (
+              <a href="#">{item.title}</a>
+            ))}
           </div>
-          <div className="header__bottom">
-            <ul className="navCont">
-              {navData.map((item) => (
-                <li>{item.title}</li>
-              ))}
-            </ul>
-          </div>
+
+          <button>i want to..</button>
         </div>
       </div>
 
