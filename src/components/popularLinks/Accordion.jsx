@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Popular.css";
 
 function Accordion({ title, content, isActive, setIsActive, id }) {
-  const show = isActive === id;
+  const [isActiveMobile, setIsActiveMobile] = useState(null);
+  const show = isActiveMobile === id;
+
   return (
     <>
       <div className="accordion-section">
         <div
           className="accordionTitle"
-          onClick={() => setIsActive(show ? null : id)}
+          onClick={() => setIsActiveMobile(show ? null : id)}
         >
           <span>{title}</span>
           <div className="show">{show ? "-" : "+"}</div>

@@ -70,12 +70,35 @@ function Popular() {
       <div className="pop__container">
         {popular.map((item) => (
           <div
+            style={{
+              backgroundColor:
+                isActive === item.id ? "#165788" : "rgba(9, 70, 115, 0.5)",
+            }}
             className="pop__wrap"
             key={item.id}
-            onClick={() => setIsActive(isActive === item.id ? null : item.id)}
+            onClick={() =>
+              setIsActive(isActive === item.id ? item.id : item.id)
+            }
           >
             <img className="images" src={item.icon} alt="" />
             <span>{item.title}</span>
+            {isActive === item.id ? (
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  position: "absolute",
+                  bottom: -15,
+                }}
+              >
+                <img
+                  style={{ height: "15px" }}
+                  src="/videos/active-tab.svg"
+                  alt=""
+                />
+              </div>
+            ) : null}
           </div>
         ))}
       </div>
@@ -86,7 +109,7 @@ function Popular() {
               {item.id === isActive && (
                 <ul className="childList">
                   {item.content.map((contentItem, index) => (
-                    <li key={index}>{contentItem}|</li>
+                    <li key={index}>{contentItem}</li>
                   ))}
                 </ul>
               )}
