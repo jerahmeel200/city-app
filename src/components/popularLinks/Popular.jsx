@@ -57,7 +57,11 @@ function Popular() {
     },
   ];
 
-  const [isActive, setIsActive] = React.useState(popular[0].id);
+  const [isActiveBigScreen, setIsActiveBigScreen] = React.useState(
+    popular[0].id
+  );
+  const [isActiveSmallScreen, setIsActiveSmallScreen] = React.useState(null);
+
   const [isAccordionVisible, setIsAccordionVisible] = React.useState(false);
 
   const toggleAccordion = () => {
@@ -71,17 +75,21 @@ function Popular() {
           <div
             style={{
               backgroundColor:
-                isActive === item.id ? "#165788" : "rgba(9, 70, 115, 0.5)",
+                isActiveBigScreen === item.id
+                  ? "#165788"
+                  : "rgba(9, 70, 115, 0.5)",
             }}
             className="pop__wrap"
             key={item.id}
             onClick={() =>
-              setIsActive(isActive === item.id ? item.id : item.id)
+              setIsActiveBigScreen(
+                isActiveBigScreen === item.id ? item.id : item.id
+              )
             }
           >
             <img className="images" src={item.icon} alt="" />
             <span>{item.title}</span>
-            {isActive === item.id ? (
+            {isActiveBigScreen === item.id ? (
               <div
                 style={{
                   width: "100%",
@@ -101,11 +109,11 @@ function Popular() {
           </div>
         ))}
       </div>
-      {isActive && (
+      {isActiveBigScreen && (
         <div className="pop__child">
           {popular.map((item) => (
             <div key={item.id}>
-              {item.id === isActive && (
+              {item.id === isActiveBigScreen && (
                 <ul className="childList">
                   {item.content.map((contentItem, index) => (
                     <li key={index}>{contentItem}</li>
@@ -126,8 +134,8 @@ function Popular() {
               key={id}
               title={title}
               content={content}
-              isActive={isActive}
-              setIsActive={setIsActive}
+              isActive={isActiveSmallScreen}
+              setIsActive={setIsActiveSmallScreen}
               id={id}
             />
           ))}
