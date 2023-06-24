@@ -18,15 +18,16 @@ function Header() {
     <div className="header">
       <div className="header__wrapper">
         <div className="header__left">
-          <h1>LOGO</h1>
+          <img src="/images/logo.png" />
         </div>
-        <div className="header__right">
-          <div className="navCont">
-            {navData.map((item) => (
-              <a href="#">{item.title}</a>
-            ))}
-          </div>
 
+        <div className="header__center">
+          {navData.map((item) => (
+            <a href="#">{item.title}</a>
+          ))}
+        </div>
+
+        <div className="header__right">
           <button>i want to..</button>
         </div>
       </div>

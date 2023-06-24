@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./Popular.css";
 import FaArrowTrendDown from "react-icons/fa";
 import Accordion from "./Accordion";
@@ -115,8 +115,13 @@ function Popular() {
             <div key={item.id}>
               {item.id === isActiveBigScreen && (
                 <ul className="childList">
-                  {item.content.map((contentItem, index) => (
-                    <li key={index}>{contentItem}</li>
+                  {item?.content?.map((contentItem, index) => (
+                    <Fragment key={index}>
+                      <a href={"#"}>{contentItem}</a>
+                      {index === item?.content?.length - 1 ? null : (
+                        <small> | </small>
+                      )}
+                    </Fragment>
                   ))}
                 </ul>
               )}
@@ -124,6 +129,7 @@ function Popular() {
           ))}
         </div>
       )}
+
       <div className="linkContainer">
         <p onClick={toggleAccordion}>Popular Links</p>
       </div>

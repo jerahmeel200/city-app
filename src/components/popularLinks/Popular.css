@@ -76,17 +76,20 @@
   display: flex;
   padding: 50px 60px;
 
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.childList li:last-child {
-  border-right: none;
-  /* border-right: 1px solid black; */
 
-  display: flex;
-  margin-right: 20px;
-  text-align: center;
+.childList small {
+  padding: 0 25px;
 }
+
+.childList a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #165788;
+}
+
 @media only screen and (max-width: 990px) {
   .pop__container {
     display: none;
