@@ -5,17 +5,41 @@ import Loading from "../../resusables/Loading/Loading";
 import styles from "./Hero.module.css";
 
 function Hero() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoad = (e) => {
+    setVideoLoaded(true);
+  };
+
   return (
     <>
       <div className={styles.videoContainer}>
+        {!videoLoaded && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              height: "100%",
+              width: "100%",
+              zIndex: 100,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Loading />
+          </div>
+        )}
+
         <video
           className={styles.video}
-          // src="/videos/market.mp4"
           autoPlay
           muted
           loop
           poster="/videos/market.jpg"
           fetchpriority="high"
+          onLoadedData={handleVideoLoad}
         >
           <source src="/videos/market-big_muted.mp4" type="video/mp4" />
         </video>
