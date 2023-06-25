@@ -3,37 +3,37 @@ import styles from "./Everyone.module.css";
 
 const boxes = {
   language: {
-    image: "/assets/images/about-us-page/language.png",
-    title: "Language lovers",
-    description: "You enjoy learning languages for the fun of it.",
+    image: "/images/project-1.jpeg",
+    title: "#InvestKafanchan",
+    description:
+      "Find out about the Municpality’s objectives towards investments, Solid Minerals, Tourism etc",
   },
 
   diaspora: {
-    image: "/assets/images/about-us-page/diaspora.png",
-    title: "African Parents in Diaspora",
+    image: "/images/project-2.jpeg",
+    title: "Street lighting Projects",
     description:
-      "Seeking ways to educate your kids about your native languages the fun way",
+      "We are taking alot of strides to the provision of Street lights in all parts of the Municipality.",
   },
 
   afro: {
-    image: "/assets/images/about-us-page/afro.png",
-    title: "Afro-Enthusiasts",
+    image: "/images/project-3.jpeg",
+    title: "Emergency Services",
     description:
-      "You love the African culture and have a strong interest in African Languages",
+      "Improving emergency services for fire safety awareness, prevention, and protection of residents.",
   },
 
   tutors: {
-    image: "/assets/images/about-us-page/tutors.png",
-    title: "Language Tutors",
-    description:
-      "You enjoy helping people improve their language skills while getting paid for doing what you love.",
+    image: "/images/project-4.jpeg",
+    title: "2022 KMA Tree Planting Campaign",
+    description: "ADKAF plants a Tree to Kick off the Tree Planting Campaign",
   },
 
   business: {
-    image: "/assets/images/about-us-page/business.png",
-    title: "Business Professionals",
+    image: "/images/project-1.jpeg",
+    title: "#InvestKafanchan",
     description:
-      "You travel for business and need African languages to boost your communication skills.",
+      "Find out about the Municpality’s objectives towards investments, Solid Minerals, Tourism etc",
   },
 };
 
@@ -57,13 +57,14 @@ const MutaEveryone = () => {
           <section>
             <header>
               <h1>
-                Muta is for <span>Everyone!</span>
+                <span>Kafanchan </span> Municipal Authority
               </h1>
 
               <p>
-                Created by Africans, Muta is preserving the digital footprints
-                of African Languages and culture by helping non-Africans across
-                the globe learn African languages the fun and easy way.
+                Kafanchan Municipal Authority was created with the goal of
+                bringing the government closer to the people. The Government of
+                His Excellency, Mal Nasir Ahmed El- Rufai has the interests of
+                the people as its core mandate...
               </p>
             </header>
 

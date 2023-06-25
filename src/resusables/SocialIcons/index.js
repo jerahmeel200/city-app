@@ -8,7 +8,12 @@ const icons = [
   "fab fa-linkedin",
   "fa fa-rss",
 ];
-function SocialIcons({ fontSize = 20, width = 40, color = "#165788" }) {
+function SocialIcons({
+  background = "#fff",
+  fontSize = 20,
+  width = 40,
+  color = "#165788",
+}) {
   return (
     <div className="socialIcons">
       {icons.map((icon) => (
@@ -20,7 +25,7 @@ function SocialIcons({ fontSize = 20, width = 40, color = "#165788" }) {
             width,
             height: width,
             borderRadius: width / 2,
-            background: "#fff",
+            background,
           }}
         >
           <i

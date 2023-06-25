@@ -3,14 +3,10 @@ import "./OurPartners.css";
 
 function OurPartners() {
   return (
-    <div
-      className="partContainer"
-      style={{ marginTop: "50px", height: "100%" }}
-    >
-      <h2
-        style={{ display: "flex", justifyContent: "center", fontWeight: 700 }}
-      >
-        Our Partners
+    <div className="partContainer" style={{ margin: "50px 0", height: "100%" }}>
+      <h2 style={{}}>
+        <span>Our</span>
+        {"  "} <span> Partners</span>
       </h2>
       <div
         style={{

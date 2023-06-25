@@ -5,8 +5,8 @@
 }
 .pop__wrap span {
   text-align: center;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 10px;
 }
 .pop__wrap {
@@ -78,7 +78,7 @@
   background-color: rgb(202, 197, 197);
   width: 100%;
   display: flex;
-  padding: 50px 60px;
+  padding: 40px 60px;
 
   justify-content: center;
   align-items: center;

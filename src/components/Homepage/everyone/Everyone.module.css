@@ -1,5 +1,5 @@
 .about_body {
-  background-color: #24a39d;
+  background-color: #165788;
   padding-top: 7rem;
 }
 @media (max-width: 1500px) {
@@ -79,15 +79,16 @@
 }
 .muta_everyone section header h1 {
   font-size: 40px;
-  line-height: 56px;
+  line-height: 54px;
   padding-bottom: 30px;
+  font-weight: 900;
 }
 .muta_everyone section header h1 span {
-  color: #24a39d;
+  color: #165788;
 }
 .muta_everyone section header p {
   font-size: 16px;
-  line-height: 40px;
+  line-height: 30px;
 }
 .muta_everyone section .right {
   flex: 1;
@@ -161,7 +162,7 @@
   margin-top: 24px;
 }
 .muta_everyone .box div h4 {
-  color: #eaedf5;
+  color: #165788;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
