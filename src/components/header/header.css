@@ -32,12 +32,13 @@
   display: flex;
   list-style: none;
   justify-content: center;
-  flex: 2;
+  flex: 1;
   height: 100%;
   align-items: center;
 }
 
-.header__center a {
+.header__center a,
+.header__right a {
   font-weight: 500;
   font-size: 19px;
   color: #000;

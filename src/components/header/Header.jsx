@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./header.css";
 import { FiMenu } from "react-icons/fi";
+import SocialIcons from "../../resusables/SocialIcons";
+
 function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false); // State variable to control the visibility of mobile nav
 
@@ -28,7 +30,8 @@ function Header() {
         </div>
 
         <div className="header__right">
-          <button>i want to..</button>
+          {/* <button>i want to..</button> */}
+          <SocialIcons color="#ec9f09" />
         </div>
       </div>
 

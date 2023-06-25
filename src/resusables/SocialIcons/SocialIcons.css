@@ -1,0 +1,12 @@
+.socialIcons {
+  display: flex;
+}
+.socialIcons > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialIcons > div i {
+  margin: 0 5px;
+}

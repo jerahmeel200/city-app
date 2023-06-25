@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import "./Popular.css";
-import FaArrowTrendDown from "react-icons/fa";
 import Accordion from "./Accordion";
 
 function Popular() {
@@ -8,7 +7,7 @@ function Popular() {
     {
       id: "1",
       title: "Trending",
-      icon: "/videos/trending.png",
+      icon: "/icons/trend.png",
       content: [
         "By-Election  for Mayor",
         "Parking Violations",
@@ -21,7 +20,7 @@ function Popular() {
     {
       id: "2",
       title: "Healthy Living",
-      icon: "/videos/trending.png",
+      icon: "/icons/heart.png",
       content: [
         "Respiratory Viruses",
         "COVID-19 Vaccines",
@@ -34,25 +33,25 @@ function Popular() {
     {
       id: "3",
       title: "Getting Around",
-      icon: "/videos/trending.png",
+      icon: "/icons/walk.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
     {
       id: "4",
       title: "Permits & Licences",
-      icon: "/videos/trending.png",
+      icon: "/icons/document.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
     {
       id: "5",
       title: "Your City",
-      icon: "/videos/trending.png",
+      icon: "/icons/city.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
     {
       id: "6",
       title: "Your Property",
-      icon: "/videos/trending.png",
+      icon: "/icons/property.png",
       content: ["Item 1", "Item 2", "Item 3"],
     },
   ];
@@ -77,7 +76,7 @@ function Popular() {
               backgroundColor:
                 isActiveBigScreen === item.id
                   ? "#165788"
-                  : "rgba(9, 70, 115, 0.7)",
+                  : "rgba(9, 70, 115, 0.8)",
             }}
             className="pop__wrap"
             key={item.id}

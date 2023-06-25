@@ -26,11 +26,14 @@
 }
 .images {
   color: white;
+  width: 30px;
+  margin-bottom: 10px;
 }
 
 .accordion {
   display: none;
 }
+
 .accordionItem {
 }
 .show {
