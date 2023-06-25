@@ -10,7 +10,7 @@ function Hero() {
   const handleVideoLoad = (e) => {
     setVideoLoaded(true);
   };
-
+  console.log({ videoLoaded });
   return (
     <>
       <div className={styles.videoContainer}>
