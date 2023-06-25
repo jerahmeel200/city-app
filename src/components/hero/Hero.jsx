@@ -38,8 +38,8 @@ function Hero() {
           muted
           loop
           poster="/videos/market.jpg"
-          fetchpriority="high"
           onLoadedData={handleVideoLoad}
+          playsinline
         >
           <source src="/videos/market-big_muted.mp4" type="video/mp4" />
         </video>
