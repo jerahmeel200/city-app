@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background-image: url("https://res.cloudinary.com/dfhvubji0/video/upload/v1687701237/market-medium_iq4nja.mp4");
+  background-size: cover;
+  background-position: center; */
 }
 
 .video {
@@ -11,6 +15,30 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+.placeholderImageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.placeholderImageWrapper main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderImageWrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
 }
 
 @media only screen and (max-width: 990px) {

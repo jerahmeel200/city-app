@@ -25,7 +25,9 @@ function Header() {
 
         <div className="header__center">
           {navData.map((item) => (
-            <a href="#">{item.title}</a>
+            <a href="#" key={item?.title}>
+              {item.title}
+            </a>
           ))}
         </div>
 
@@ -40,7 +42,9 @@ function Header() {
           <div className="mobile__nav">
             <ul className="mobile__navCont">
               {navData.map((item) => (
-                <li key={item.title}>{item.title}</li>
+                <li key={item.title} key={item?.title}>
+                  {item.title}
+                </li>
               ))}
             </ul>
           </div>

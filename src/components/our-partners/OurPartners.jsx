@@ -5,7 +5,7 @@ function OurPartners() {
   return (
     <div className="partContainer" style={{ margin: "50px 0", height: "100%" }}>
       <h2 style={{}}>
-        <span>Our</span>
+        <small>Our</small>
         {"  "} <span> Partners</span>
       </h2>
       <div

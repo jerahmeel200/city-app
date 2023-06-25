@@ -1,6 +1,8 @@
-import React from "react";
-import styles from "./Hero.module.css";
+import React, { useState } from "react";
+
 import Popular from "../popularLinks/Popular";
+import Loading from "../../resusables/Loading/Loading";
+import styles from "./Hero.module.css";
 
 function Hero() {
   return (
@@ -8,12 +10,15 @@ function Hero() {
       <div className={styles.videoContainer}>
         <video
           className={styles.video}
-          // src="/videos/market-big.mp4"
-          src="/videos/market-medium.mp4"
+          // src="/videos/market.mp4"
           autoPlay
-          loop
           muted
-        />
+          loop
+          poster="/videos/market.jpg"
+          fetchpriority="high"
+        >
+          <source src="/videos/market-big_muted.mp4" type="video/mp4" />
+        </video>
       </div>
       <Popular />
     </>

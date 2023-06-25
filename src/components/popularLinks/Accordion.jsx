@@ -17,7 +17,9 @@ function Accordion({ title, content, isActive, setIsActive, id }) {
         {show && (
           <div className="accordionContent">
             {content.map((item, index) => (
-              <p key={index}>{item}</p>
+              <p key={index} key={item}>
+                {item}
+              </p>
             ))}
           </div>
         )}
