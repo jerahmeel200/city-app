@@ -1,72 +1,33 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
-import MutaEveryone from "./components/Homepage/everyone/Everyone";
-import OurPartners from "./components/our-partners/OurPartners";
-import SocialIcons from "./resusables/SocialIcons";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
-function App() {
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Team from "./pages/Team";
+import Mandate from "./pages/Mandate";
+
+export default function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <MutaEveryone />
-      <OurPartners />
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about-us">
+            <About />
+          </Route>
 
-      <div
-        style={{
-          background: "#165788",
-          minHeight: 50,
-        }}
-      >
-        <div
-          style={{
-            margin: "auto",
-            width: "100%",
-            maxWidth: 1600,
-            color: "#fff",
-            display: "flex",
-            flexWrap: "wrap",
-            padding: "30px",
-            fontSize: 13,
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
-            <span style={{ color: "#fff" }}>
-              ©Kafanchan Municipal Authority.
-            </span>{" "}
-            <small
-              style={{
-                padding: "0 20px",
-              }}
-            >
-              |
-            </small>
-            <span style={{ color: "#fff" }}>2023 All Rights Reserved</span>
-            <small
-              style={{
-                padding: "0 20px",
-              }}
-            >
-              |
-            </small>
-            <span style={{ color: "#fff" }}>
-              KMA is a trademark and service mark of the Municipal of Kafanchan.
-            </span>
-          </div>
+          <Route path="/our-team">
+            <Team />
+          </Route>
 
-          <SocialIcons color="#ec9f09" background="#ffffff00" />
-        </div>
+          <Route path="/our-mandate">
+            <Mandate />
+          </Route>
+        </Switch>
       </div>
-    </>
+    </Router>
   );
 }
-
-export default App;

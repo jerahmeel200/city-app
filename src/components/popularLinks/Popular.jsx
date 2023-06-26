@@ -61,7 +61,7 @@ function Popular() {
   );
   const [isActiveSmallScreen, setIsActiveSmallScreen] = React.useState(null);
 
-  const [isAccordionVisible, setIsAccordionVisible] = React.useState(false);
+  const [isAccordionVisible, setIsAccordionVisible] = React.useState(true);
 
   const toggleAccordion = () => {
     setIsAccordionVisible(!isAccordionVisible);
