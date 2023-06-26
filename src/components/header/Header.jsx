@@ -72,13 +72,20 @@ function Header() {
       <div className="mobile__wrapper">
         {showMobileNav && (
           <div className="mobile__nav">
-            <ul className="mobile__navCont">
+            <div className="mobile__navCont">
               {navData.map((item) => (
-                <li key={item.title} key={item?.title}>
+                <a
+                  href={item.link}
+                  style={{
+                    borderBottomColor:
+                      location?.pathname === item?.link ? "#165788" : null,
+                  }}
+                  key={item?.title}
+                >
                   {item.title}
-                </li>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
         )}
         <div className="mobile__left">
