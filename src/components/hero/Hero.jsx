@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Popular from "../popularLinks/Popular";
 import Loading from "../../resusables/Loading/Loading";
@@ -22,7 +22,7 @@ function Hero() {
             <main>
               <Loading />
             </main>
-            <img alt="Placeholder" src="/videos/market.jpg" />
+            <ImageShow />
           </div>
         )}
 
@@ -37,7 +37,6 @@ function Hero() {
         <video
           className={!videoLoaded ? styles.hide : styles.video}
           src="/videos/market-big_muted.mp4"
-          // src="/videos/market.mp4"
           autoPlay
           muted
           loop
@@ -49,5 +48,25 @@ function Hero() {
     </>
   );
 }
+
+const ImageShow = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [
+    "/images/header-1.jpeg",
+    "/images/header-2.jpg",
+    "/images/header-3.jpeg",
+    "/images/header-4.jpeg",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return <img src={images[currentIndex]} alt="Carousel Image" />;
+};
 
 export default Hero;

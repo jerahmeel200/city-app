@@ -1,0 +1,17 @@
+.carousel {
+  position: relative;
+  height: 300px; /* Set the desired height */
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}

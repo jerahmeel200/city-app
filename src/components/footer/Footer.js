@@ -33,7 +33,7 @@ export default function Footer() {
           }}
         >
           <span style={{ color: "#777777" }}>
-            ©Kafanchan Municipal Authority.
+            © Kafanchan Municipal Authority.
           </span>{" "}
           <small
             style={{
@@ -42,7 +42,7 @@ export default function Footer() {
           >
             |
           </small>
-          <span style={{ color: "#777777" }}>2023 All Rights Reserved</span>
+          <span style={{ color: "#777777" }}>2023 All Rights Reserved.</span>
           <small
             style={{
               padding: "0 20px",

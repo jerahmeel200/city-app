@@ -1,0 +1,36 @@
+.container {
+  padding: 50px 30px;
+}
+
+.container > div {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.container > div h2 {
+  text-align: left;
+  color: #165788;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 26px;
+}
+
+.container > div p,
+.container > div li {
+  line-height: 26px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.container > div i {
+  text-align: left;
+  display: block;
+  padding-top: 20px;
+  color: #165788;
+}
+
+.container > div ul {
+  padding: 0 20px;
+  list-style-type: circle;
+}
