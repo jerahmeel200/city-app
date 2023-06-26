@@ -27,6 +27,7 @@ export default function About() {
       />
 
       <SegmentComponent
+        reverse
         left={
           <Quote
             title="Vision"

@@ -95,9 +95,23 @@ function Header() {
 
             <button onClick={toggleMobileNav} className="snack">
               {showMobileNav ? (
-                <span style={{ fontWeight: 500, fontSize: "20px" }}>X</span>
+                <img
+                  src="/images/close.png"
+                  style={{
+                    height: "70%",
+                    width: "70%",
+                    objectFit: "contain",
+                  }}
+                />
               ) : (
-                <FiMenu />
+                <img
+                  src="/images/menu.png"
+                  style={{
+                    height: "70%",
+                    width: "70%",
+                    objectFit: "contain",
+                  }}
+                />
               )}
             </button>
           </div>

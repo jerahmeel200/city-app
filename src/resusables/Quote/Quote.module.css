@@ -13,7 +13,7 @@
   color: #165788;
   font-weight: 700;
   font-size: 50px;
-  line-height: 26px;
+  line-height: 60px;
 }
 
 .container > div p,
@@ -33,4 +33,10 @@
 .container > div ul {
   padding: 0 20px;
   list-style-type: circle;
+}
+
+@media only screen and (max-width: 990px) {
+  .container {
+    padding: 25px 10px;
+  }
 }

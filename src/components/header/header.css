@@ -114,10 +114,16 @@
   cursor: pointer;
 }
 .snack {
-  padding: 4px;
   border: none;
   font-size: 30px;
   cursor: pointer;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  margin-left: 20px;
 }
 .mobile__right input {
   width: 100%;

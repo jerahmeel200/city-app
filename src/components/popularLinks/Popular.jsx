@@ -34,25 +34,49 @@ function Popular() {
       id: "3",
       title: "Getting Around",
       icon: "/icons/walk.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "By-Election  for Mayor",
+        "Parking Violations",
+        "Property Tax Lookup",
+        "Drop-in Swimming & Water Play",
+        "Waste Reduction",
+      ],
     },
     {
       id: "4",
       title: "Permits & Licences",
       icon: "/icons/document.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "Respiratory Viruses",
+        "COVID-19 Vaccines",
+        "MPOX (Monkeypox)",
+        "Mental Health",
+        "Child Vaccination",
+      ],
     },
     {
       id: "5",
       title: "Your City",
       icon: "/icons/city.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "By-Election  for Mayor",
+        "Parking Violations",
+        "Property Tax Lookup",
+        "Drop-in Swimming & Water Play",
+        "Waste Reduction",
+      ],
     },
     {
       id: "6",
       title: "Your Property",
       icon: "/icons/property.png",
-      content: ["Item 1", "Item 2", "Item 3"],
+      content: [
+        "Respiratory Viruses",
+        "COVID-19 Vaccines",
+        "MPOX (Monkeypox)",
+        "Mental Health",
+        "Child Vaccination",
+      ],
     },
   ];
 

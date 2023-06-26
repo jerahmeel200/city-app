@@ -30,6 +30,7 @@ export default function Footer() {
             display: "flex",
             flexWrap: "wrap",
             margin: "10px 0",
+            lineHeight: "30px",
           }}
         >
           <span style={{ color: "#777777" }}>
