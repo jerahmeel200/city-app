@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Everyone.module.css";
+import { CustomSlideIn } from "../../CustomReveal";
 
 const boxes = {
   language: {
@@ -37,15 +38,20 @@ const boxes = {
   },
 };
 
-const SingleBox = ({ item }) => {
+const SingleBox = ({ item, slideInDirection, slideInDuration }) => {
   return (
-    <div className={styles.box}>
-      <img src={item?.image} alt="language" />
-      <div>
-        <h4>{item?.title}</h4>
-        <p>{item?.description}</p>
+    <CustomSlideIn direction={slideInDirection} duration={slideInDuration}>
+      <div className={styles.box}>
+        <main className={styles.leftBorder}>
+          <main></main>
+        </main>
+        <img src={item?.image} alt="language" />
+        <div>
+          <h4>{item?.title}</h4>
+          <p>{item?.description}</p>
+        </div>
       </div>
-    </div>
+    </CustomSlideIn>
   );
 };
 
@@ -53,6 +59,7 @@ const MutaEveryone = () => {
   return (
     <>
       <div className={styles.muta_everyone}>
+        <div className={styles.blur}></div>
         <main>
           <section>
             <header>
@@ -73,13 +80,21 @@ const MutaEveryone = () => {
                 className={styles.column}
                 style={{ justifyContent: "flex-end" }}
               >
-                <SingleBox item={boxes?.language} />
+                <SingleBox
+                  slideInDirection="left"
+                  slideInDuration={2000}
+                  item={boxes?.language}
+                />
               </div>
               <div
                 className={styles.column}
                 style={{ justifyContent: "flex-start" }}
               >
-                <SingleBox item={boxes?.diaspora} />
+                <SingleBox
+                  slideInDirection="left"
+                  slideInDuration={1000}
+                  item={boxes?.diaspora}
+                />
               </div>
             </div>
           </section>
@@ -91,8 +106,16 @@ const MutaEveryone = () => {
                   className={styles.column}
                   style={{ justifyContent: "space-between" }}
                 >
-                  <SingleBox item={boxes?.afro} />
-                  <SingleBox item={boxes?.tutors} />
+                  <SingleBox
+                    slideInDuration={2000}
+                    slideInDirection="right"
+                    item={boxes?.afro}
+                  />
+                  <SingleBox
+                    slideInDuration={2000}
+                    slideInDirection="right"
+                    item={boxes?.tutors}
+                  />
                 </div>
               </div>
               <div
@@ -103,7 +126,11 @@ const MutaEveryone = () => {
                   className={styles.column}
                   style={{ justifyContent: "center", alignItems: "flex-end" }}
                 >
-                  <SingleBox item={boxes?.business} />
+                  <SingleBox
+                    slideInDuration={1000}
+                    slideInDirection="right"
+                    item={boxes?.business}
+                  />
                 </div>
               </div>
             </div>

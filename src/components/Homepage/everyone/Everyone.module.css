@@ -27,7 +27,22 @@
   padding: 80px 30px;
   background-color: #f5f7fa;
   display: flex;
+  background: url("../../../assets/shapes-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
+
+.blur {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 1260px) {
   .muta_everyone {
     height: fit-content;
@@ -56,6 +71,7 @@
   max-width: calc((282px + 282px) + 24px);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 @media (max-width: 1260px) {
   .muta_everyone section {
@@ -151,6 +167,7 @@
   border-radius: 24px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .muta_everyone .box img {
   width: 100% !important;
@@ -158,6 +175,27 @@
   padding: 0 !important;
   height: 160px;
 }
+
+.muta_everyone .leftBorder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 100%;
+  background-color: #d6b60d;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.muta_everyone .leftBorder main {
+  position: absolute;
+
+  width: 14px;
+  background-color: #fff;
+  height: 100%;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+
 .muta_everyone .box div {
   margin-top: 24px;
 }
@@ -179,5 +217,12 @@
   }
   .muta_everyone .box div p {
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .muta_everyone {
+    padding: 80px 20px;
+    padding-top: 40px;
   }
 }

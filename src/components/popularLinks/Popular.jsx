@@ -85,7 +85,7 @@ function Popular() {
   );
   const [isActiveSmallScreen, setIsActiveSmallScreen] = React.useState(null);
 
-  const [isAccordionVisible, setIsAccordionVisible] = React.useState(true);
+  const [isAccordionVisible, setIsAccordionVisible] = React.useState(false);
 
   const toggleAccordion = () => {
     setIsAccordionVisible(!isAccordionVisible);
@@ -154,7 +154,9 @@ function Popular() {
       )}
 
       <div className="linkContainer">
-        <p onClick={toggleAccordion}>Popular Links</p>
+        <p onClick={toggleAccordion}>
+          <span>Popular Links</span> <i className="fa-solid fa-arrow-right"></i>
+        </p>
       </div>
       {isAccordionVisible && (
         <div className="accordion">

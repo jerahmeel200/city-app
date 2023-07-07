@@ -5,6 +5,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .left {
@@ -23,6 +25,8 @@
 
 .segmentImage {
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .segmentImage img {

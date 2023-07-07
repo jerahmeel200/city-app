@@ -81,22 +81,47 @@ export default function Team() {
       <Banner title="Our Team" />
       <div
         style={{
-          padding: "100px 30px",
-          width: "100%",
-          maxWidth: 1400,
-          margin: "0 auto",
+          backgroundImage: "url('/images/shapes-bg.jpg')",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          position: "relative",
+          backgroundAttachment: "fixed",
         }}
       >
-        <PageMessage
-          msg="At Kafanchan Municipal Authority, we take pride in the dedicated and
+        <div
+          style={{
+            top: 0,
+            left: 0,
+            position: "absolute",
+            background: "rgba(255, 255, 255, 0.7)",
+            height: "100%",
+            width: "100%",
+            zIndex: 1,
+          }}
+        ></div>
+
+        <div
+          style={{
+            padding: "100px 30px",
+            width: "100%",
+            maxWidth: 1400,
+            margin: "0 auto",
+            zIndex: 10,
+            position: "relative",
+          }}
+        >
+          <PageMessage
+            msg="At Kafanchan Municipal Authority, we take pride in the dedicated and
           passionate team that works tirelessly to serve the community of
           Kafanchan. Our team is composed of talented individuals from various
           fields, all committed to providing exceptional services and ensuring
           the welfare and progress of our municipality."
-        />
+          />
 
-        <TeamMembers members={membersMain} />
-        <TeamMembers members={members} />
+          <TeamMembers members={membersMain} />
+          <TeamMembers members={members} />
+        </div>
       </div>
       <Footer />
     </>

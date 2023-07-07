@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./SegmentComponent.module.css";
+import { CustomSlideIn } from "../../components/CustomReveal";
 
 export default function SegmentComponent({
   left = null,
@@ -8,8 +9,10 @@ export default function SegmentComponent({
 }) {
   return (
     <div className={reverse ? styles.containerReverse : styles.container}>
-      <div className={styles["left"]}>{left}</div>
-      <div className={styles["right"]}>{right}</div>
+      <CustomSlideIn duration={2300}>
+        <div className={styles["left"]}>{left}</div>
+        <div className={styles["right"]}>{right}</div>
+      </CustomSlideIn>
     </div>
   );
 }
