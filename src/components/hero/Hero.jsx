@@ -74,7 +74,6 @@
 import React, { useState, useEffect } from "react";
 
 import Popular from "../popularLinks/Popular";
-import Loading from "../../resusables/Loading/Loading";
 import styles from "./Hero.module.css";
 
 import { Fade, Slide } from "react-awesome-reveal";

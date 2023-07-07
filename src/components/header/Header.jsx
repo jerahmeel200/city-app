@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
-import { FiMenu } from "react-icons/fi";
 import SocialIcons from "../../resusables/SocialIcons";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const location = useLocation();

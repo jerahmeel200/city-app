@@ -155,7 +155,7 @@ function Popular() {
 
       <div className="linkContainer">
         <p onClick={toggleAccordion}>
-          <span>Popular Links</span> <i className="fa-solid fa-arrow-right"></i>
+          <span>Popular Links</span> <i className="fa fa-arrow-right"></i>
         </p>
       </div>
       {isAccordionVisible && (
