@@ -153,7 +153,7 @@ function Popular() {
         </div>
       )}
 
-      <div className="linkContainer">
+      {/* <div className="linkContainer">
         <p onClick={toggleAccordion}>
           <span>Popular Links</span> <i className="fa fa-arrow-right"></i>
         </p>
@@ -171,7 +171,7 @@ function Popular() {
             />
           ))}
         </div>
-      )}
+      )} */}
     </>
   );
 }
